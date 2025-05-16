@@ -1,0 +1,118 @@
+.app {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+
+  padding: 2rem;
+}
+
+a {
+  color: #3498db; 
+  text-decoration: none;
+
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #1f6ea6; 
+}
+
+button {
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+
+  font-family: inherit; 
+
+  cursor: pointer;
+
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+button:focus {
+  outline: 2px solid #3498db;
+}
+
+button:hover {
+  background-color: #2980b9;
+  color: white;
+}
+
+.app.light {
+  background-color: #f2f6fc; 
+  color: #333333; 
+}
+
+.app.light .header,
+.app.light .footer {
+  background-color: #b3d4fc; 
+  color: #000000;
+}
+
+.app.light button {
+  border: none;
+
+  background-color: #3498db; 
+  color: white; 
+}
+
+.app.light button:hover {
+  background-color: #217dbb; 
+}
+
+.app.light .footer button {
+  background-color: black; 
+}
+
+.app.light a {
+  color: #3498db; 
+}
+
+.app.light a:hover {
+  color: #1f6ea6; 
+}
+
+.app.light .nav-item button {
+  border: none; 
+  border-radius: 5px; 
+  padding: 0.5rem 1rem;
+
+  background-color: transparent; 
+  color: black;
+
+  cursor: pointer;
+
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.app.light .nav-item button:hover {
+  background-color: #217dbb; 
+
+  transform: scale(1.05);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none;
+    transition: none;
+  }
+
+  button:hover {
+    transform: none;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  .app.light .nav-item button:hover {
+    transform: none;
+  }
+}
+

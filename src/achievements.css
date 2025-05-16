@@ -1,0 +1,125 @@
+.achievements {
+    display: flex;
+    flex-direction: column;
+
+    padding: 2rem;
+
+    align-items: center;   
+}
+
+.achievements.dark {
+    background-color: #2c3e503b;
+    color: #ffffff;
+}
+  
+.achievements-title {
+    margin-bottom: 1rem;
+
+    font-size: 2rem;
+}
+
+.accordion {
+    width: 100%;
+    max-width: 800px;
+}
+
+.accordion-item {
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.light .accordion-item {
+    border: 1px solid #ddd;
+}
+
+.light .accordion-header {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+
+    background-color: #1e90ff;
+    color: white;
+    text-align: left;
+    font-size: 1.2rem;
+
+    cursor: pointer;
+}
+
+.light .accordion-header:hover {
+    background-color: #4682b4;
+}
+
+.light .accordion-content {
+    padding: 1rem;
+
+    background-color: #ffffff;
+}
+
+.light .accordion-content li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.dark .accordion-item {
+    border: 1px solid #555;
+}
+
+.dark .accordion-header {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+
+    background-color: #34495e;
+    color: #ffffff;
+    text-align: left;
+    font-size: 1.2rem;
+
+    cursor: pointer;
+}
+
+.dark .accordion-header:hover {
+    background-color: #444;
+}
+
+.dark .accordion-content {
+    padding: 1rem;
+
+    background-color: #34495e;
+    color: white;
+}
+
+.dark .accordion-content li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #555;
+    
+    color: white;
+}
+
+.achievements .welcome-message {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    width: 100%;
+  
+    font-size: 1.2rem;
+    text-align: center;
+    background-color: #3498db;
+    color: white;
+  
+    animation: fade-out 3s forwards;
+}
+  
+@media (max-width: 40rem) {
+    .achievements-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .accordion-header,
+    .accordion-content,
+    .accordion-item {
+        transition: none;
+        animation: none;
+    }
+}
